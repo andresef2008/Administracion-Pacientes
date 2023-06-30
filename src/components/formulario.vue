@@ -1,7 +1,15 @@
 <script setup>
-    import {ref} from 'vue'
+    import {reactive} from 'vue'
 
-    const nombre = ref ('')
+    const paciente = reactive ({
+        nombre: '',
+        propietario: ''
+
+
+
+
+    })
+   
 
 </script>
 
@@ -19,7 +27,8 @@
            
        >
 
-       {{ nombre }}
+       {{ paciente.nombre }}
+       {{ paciente.propietario }}
      
        <div class="mb-5">
         <label 
@@ -35,7 +44,7 @@
             type="text"
             placeholder="Nombre de la mascota"
             class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
-            v-model="nombre"
+            v-model="paciente.nombre"
           />
 
        </div>
@@ -53,6 +62,7 @@
             type="text"
             placeholder="Nombre del propietario"
             class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+            v-model="paciente.propietario"
          
           />
 
