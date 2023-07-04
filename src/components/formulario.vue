@@ -1,14 +1,34 @@
 <script setup>
     import {reactive} from 'vue'
+    import Alerta from './Alerta.vue'
 
-    const paciente = reactive ({
-        nombre: '',
-        propietario: ''
-
-
+    const alerta = reactive({
+        tipo: '',
+        mensaje: ''
 
 
     })
+
+    const paciente = reactive ({
+        nombre: '',
+        propietario: '',
+        email: '',
+        alta:'',
+        sintomas: ''
+    })
+
+    const validar = () => {
+        if(Object.values(paciente).includes('')){
+           alerta.mensaje = 'Todos los campos son obligatorios'
+           alerta.tipo = 'error'
+            return
+
+        }
+        
+        console.log('Agregando...')
+
+
+    }
    
 
 </script>
@@ -24,6 +44,7 @@
 
        <form
         class = "bg-white shadow-md rounded-lg py-10 px-5 mb-10"
+        @submit.prevent="validar"
            
        >
 
@@ -82,6 +103,7 @@
             type="text"
             placeholder="Email del propietario"
             class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+            v-model="paciente.email"
           />
 
        </div>
@@ -98,6 +120,7 @@
             id="alta"
             type="date"
             class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+            v-model="paciente.alta"
           />
 
        </div>
@@ -114,6 +137,7 @@
             id="sintomas"
             placeholder="Describe los sintomas de este paciente"
             class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md h-40"
+            v-model="paciente.sintomas"
           />
 
        </div>
