@@ -22,11 +22,9 @@
            alerta.mensaje = 'Todos los campos son obligatorios'
            alerta.tipo = 'error'
             return
-
         }
         
         console.log('Agregando...')
-
 
     }
    
