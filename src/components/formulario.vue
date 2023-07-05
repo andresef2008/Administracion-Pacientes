@@ -9,14 +9,7 @@
 
     })
 
-    const paciente = reactive ({
-        nombre: '',
-        propietario: '',
-        email: '',
-        alta:'',
-        sintomas: ''
-    })
-
+    
     const validar = () => {
         if(Object.values(paciente).includes('')){
            alerta.mensaje = 'Todos los campos son obligatorios'
@@ -70,7 +63,7 @@
             type="text"
             placeholder="Nombre de la mascota"
             class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
-            v-model="paciente.nombre"
+            
           />
 
        </div>
@@ -88,7 +81,7 @@
             type="text"
             placeholder="Nombre del propietario"
             class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
-            v-model="paciente.propietario"
+            
          
           />
 
@@ -108,7 +101,7 @@
             type="text"
             placeholder="Email del propietario"
             class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
-            v-model="paciente.email"
+            
           />
 
        </div>
@@ -125,7 +118,7 @@
             id="alta"
             type="date"
             class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
-            v-model="paciente.alta"
+            
           />
 
        </div>
@@ -142,7 +135,7 @@
             id="sintomas"
             placeholder="Describe los sintomas de este paciente"
             class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md h-40"
-            v-model="paciente.sintomas"
+            
           />
 
        </div>
