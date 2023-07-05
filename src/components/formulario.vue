@@ -34,12 +34,13 @@ const props = defineProps({
   }
 })
  
-const emits = defineEmits([
-  'update:mascota',
+const emit = defineEmits([
+  'update:nombre',
   'update:propietario',
   'update:email',
   'update:alta',
-  'update:sintomas'
+  'update:sintomas',
+  'guardar-paciente'
 ])
  
 const validar = () => {
@@ -49,7 +50,7 @@ const validar = () => {
     return
   }
  
-  console.log('Agregando...')
+  emit('guardar-paciente')
 }
 </script>
  
