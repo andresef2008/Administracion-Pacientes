@@ -47,6 +47,7 @@
         alerta.mensaje = 'Paciente Almacenado Correctamente'
         alerta.tipo = 'exito'
 
+        //Temporizador para que el menseje de agregaf
         setTimeout(() => {
             Object.assign(alerta, {
                 tipo: '',

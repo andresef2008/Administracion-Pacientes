@@ -1,8 +1,8 @@
 <script setup>
   import {ref, reactive, watch, onMounted} from 'vue'
-  //import { uid } from 'uid'
+import { uid } from 'uid'
   import Header from './components/Header.vue'
-  import Formulario from './components/Formulario.vue'
+  import Formulario from './components/formulario.vue'
   import Paciente from './components/Paciente.vue'
 
   const pacientes = ref([])
@@ -41,7 +41,7 @@
     } else {
       pacientes.value.push({
         ...paciente,
-      //  id: uid()
+        id: uid()
       })
     }
 
