@@ -55,12 +55,12 @@ import { uid } from 'uid'
       id: null
     })
   }
-/*
+
   const actualizarPaciente = (id) => {
       const pacienteEditar = pacientes.value.filter( paciente => paciente.id === id )[0]
       Object.assign(paciente, pacienteEditar)
   }
-
+/*
   const eliminarPaciente = (id) => {
     pacientes.value = pacientes.value.filter( paciente => paciente.id !== id)
   }*/
@@ -94,6 +94,7 @@ import { uid } from 'uid'
                     <Paciente
                       v-for="paciente in pacientes"
                       :paciente="paciente"
+                      @actualizar-paciente="actualizarPaciente"
                        />
 
                 </div>
