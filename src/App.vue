@@ -79,6 +79,7 @@ import { uid } from 'uid'
                 v-model:alta="paciente.alta"
                 v-model:sintomas="paciente.sintomas"
                 @guardar-paciente="guardarPaciente"
+                :id="paciente.id"
                 
             />
 
