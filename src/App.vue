@@ -15,13 +15,13 @@ import { uid } from 'uid'
       alta:'',
       sintomas: ''
   })
-/*
+
   watch(pacientes, () => {
     guardarLocalStorage()
   }, {
     deep: true
-  })*/
-/*
+  })
+
   const guardarLocalStorage = () => {
     localStorage.setItem('pacientes', JSON.stringify(pacientes.value))
   }
@@ -31,7 +31,7 @@ import { uid } from 'uid'
     if(pacientesStorage) {
       pacientes.value = JSON.parse(pacientesStorage)
     }
-  })*/
+  })
 
   const guardarPaciente = () => {
     if(paciente.id) {
