@@ -1,5 +1,5 @@
 <script setup>
-    defineEmits(['actualizar-paciente'])
+    defineEmits(['actualizar-paciente', 'eliminar-paciente'])
 
     defineProps({
         paciente: {
